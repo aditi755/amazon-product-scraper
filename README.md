@@ -5,6 +5,8 @@ A robust web scraper that extracts product data from Amazon using **Node.js, Exp
 ### How it works : watch demo [here](https://www.loom.com/share/1c0bd390c85d469d80806e1be541fa2b?sid=f84a2559-5e06-4db1-8719-75ac9d096ec7)
 Live link: https://amazon-product-scraper-etko.vercel.app
 
+Note: Puppeteer works locally because it downloads Chrome automatically, but in production (on Vercel), serverless environments don't include a pre-installed Chrome binary. As a result, the scraper might not work in production in most cases. To fix this in the future, I plan to use @sparticuz/chromium, a lightweight version of Chromium designed for AWS Lambda and Vercel, along with puppeteer-core to ensure seamless deployment.
+
 ![Screenshot (146)](https://github.com/user-attachments/assets/68d5291c-d197-47cb-92d6-02452b0938cd)
 
 ---
