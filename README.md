@@ -3,6 +3,8 @@
 A robust web scraper that extracts product data from Amazon using **Node.js, Express, Puppeteer, and TypeScript**. The application features a **Next.js frontend** for a smooth user experience and leverages the **Google Gemini AI API** to generate insightful summaries of customer reviews.
 
 ### How it works : watch demo [here](https://www.loom.com/share/1c0bd390c85d469d80806e1be541fa2b?sid=f84a2559-5e06-4db1-8719-75ac9d096ec7)
+Live link: https://amazon-product-scraper-etko.vercel.app
+
 ![Screenshot (146)](https://github.com/user-attachments/assets/68d5291c-d197-47cb-92d6-02452b0938cd)
 
 ---
