@@ -10,6 +10,7 @@ export default function AllProducts() {
     const fetchProducts = async () => {
       try {
         // Fetch directly from backend route
+        console.log("API_URL", API_URL);
         const res = await fetch(`${API_URL}/products`);
         if (!res.ok) {
           throw new Error('Failed to fetch products');

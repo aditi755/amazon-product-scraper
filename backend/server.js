@@ -30,7 +30,7 @@ mongoose
 //if want to allow dev and prod frontend endpoint 
 app.use(
   cors({
-    origin: ['http://localhost:3001', 'https://amazon-product-scraper-alpha.vercel.app']
+    origin: ['http://localhost:3001', 'https://amazon-product-scraper-etko.vercel.app']
   })
 );
 
