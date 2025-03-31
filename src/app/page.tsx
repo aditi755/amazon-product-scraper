@@ -41,6 +41,7 @@ export default function Home() {
       }
     } catch (error) {
       setError('Error fetching product data');
+      console.log(error)
     } finally {
       setLoading(false);
     }
