@@ -26,7 +26,6 @@ A robust web scraper that extracts product data from Amazon using **Node.js, Exp
 - **Server:** Node.js + Express.js
 - **Scraper:** Puppeteer for web scraping
 - **AI API:** Google Gemini API for review summaries
-- **Database:** MongoDB (optional for persistent data)
 
 ## Setup 
 ```
