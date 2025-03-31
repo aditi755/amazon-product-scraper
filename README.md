@@ -2,13 +2,14 @@
 
 A robust web scraper that extracts product data from Amazon using **Node.js, Express, Puppeteer, and TypeScript**. The application features a **Next.js frontend** for a smooth user experience and leverages the **Google Gemini AI API** to generate insightful summaries of customer reviews.
 
-### How it works : watch demo [here](https://www.loom.com/share/92e6730ebf794e0e864f810c5bbffb66?sid=7332776b-1e29-4c45-956b-d99917662ad1)
+### How it works : watch demo [here](https://www.loom.com/share/1c0bd390c85d469d80806e1be541fa2b?sid=f84a2559-5e06-4db1-8719-75ac9d096ec7)
 ---
 
 ## Features
 
 - Scrapes product data from Amazon efficiently.  
-- Extracts key product details, including name, price, rating, and more.  
+- Extracts key product details, including name, price, rating, and more.
+- Saves the extracted data as well.
 - Generates AI-powered review summaries with Google Gemini API.  
 - Displays extracted data on a clean and responsive Next.js frontend.  
 - Supports bank offers, manufacturer images, and additional information.
@@ -26,6 +27,7 @@ A robust web scraper that extracts product data from Amazon using **Node.js, Exp
 - **Server:** Node.js + Express.js
 - **Scraper:** Puppeteer for web scraping
 - **AI API:** Google Gemini API for review summaries
+- **Database** Mongodb
 
 ## Setup 
 ```
@@ -41,8 +43,19 @@ npm install
 ```
 GEMINI_API_KEY=your-gemini-api-key
 PORT=5000
+MONGO_URI=your_db_key
 ```
 
+- To run frontend
+- ```
+  npm run dev
+  ```
+
+- to run backend
+- ```
+  cd backend
+  node server.js
+  ```
 ---
 
 
