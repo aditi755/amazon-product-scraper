@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 interface ProductData {
   name: string;
   rating: string;
@@ -62,7 +62,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-2xl bg-white shadow-lg rounded-2xl p-6">
         <h1 className="text-2xl font-bold text-center mb-4 text-blue-500">Amazon Product Scraper</h1>
-
+        
         <div className="flex space-x-2 mb-4">
           <input
             type="text"
@@ -78,6 +78,12 @@ export default function Home() {
           >
             {loading ? 'Fetching...' : 'Fetch Data'}
           </button>
+      <Link
+        href="/all-products"
+        className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+      >
+        See All Products
+      </Link>
         </div>
 
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}

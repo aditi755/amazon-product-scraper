@@ -2,15 +2,27 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
+const mongoose = require('mongoose');
 const scrapeRoute = require('./routes/productRoutes');
 
 
 // Explicitly set the path to .env in the root directory
-// dotenv.config({ path: path.resolve(__dirname, './.env') });
 dotenv.config({ path: path.join(__dirname, ".env") });
 
 const app = express();
 const PORT = process.env.PORT;
+
+// MongoDB Connection
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('✅ MongoDB Connected Successfully!'))
+  .catch((err) => {
+    console.error('❌ MongoDB Connection Failed:', err.message);
+    process.exit(1);
+  });
 
 // Middleware
 app.use(cors({ origin: 'http://localhost:3001' })); // Allow frontend requests adjust as per your frontend port
