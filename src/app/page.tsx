@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProductData } from './types/product';
+import { API_URL } from './utils/config';
 export default function Home() {
   const [url, setUrl] = useState<string>('');
   const [productData, setProductData] = useState<ProductData | null>(null);
@@ -20,7 +21,7 @@ export default function Home() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/scrape', {
+      const response = await fetch(`${API_URL}/scrape`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

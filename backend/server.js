@@ -25,7 +25,15 @@ mongoose
   });
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:3001' })); // Allow frontend requests adjust as per your frontend port
+//app.use(cors({ origin: 'http://localhost:3001' })); // Allow frontend requests adjust as per your frontend port
+
+//if want to allow dev and prod frontend endpoint 
+app.use(
+  cors({
+    origin: ['http://localhost:3001', 'https://amazon-product-scraper-alpha.vercel.app']
+  })
+);
+
 app.use(express.json());
 app.use('/api', scrapeRoute);
 

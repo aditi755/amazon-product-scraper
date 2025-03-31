@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { ProductData } from '../types/product';
+import {API_URL} from '../utils/config';
+
 export default function AllProducts() {
   const [products, setProducts] = useState<ProductData[]>([]);
 
@@ -8,7 +10,7 @@ export default function AllProducts() {
     const fetchProducts = async () => {
       try {
         // Fetch directly from backend route
-        const res = await fetch('http://localhost:5000/api/products');
+        const res = await fetch(`${API_URL}/products`);
         if (!res.ok) {
           throw new Error('Failed to fetch products');
         }
