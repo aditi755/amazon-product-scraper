@@ -3,20 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-interface ProductData {
-  name: string;
-  rating: string;
-  numberOfRatings: string;
-  price: string;
-  discount: string;
-  aboutThisItem: string[];
-  productInformation: Record<string, string>;
-  productImages: string[];
-  aiSummary: string;
-  bankOffers?: string[];
-  manufacturerImages?: string[];
-}
-
+import { ProductData } from './types/product';
 export default function Home() {
   const [url, setUrl] = useState<string>('');
   const [productData, setProductData] = useState<ProductData | null>(null);

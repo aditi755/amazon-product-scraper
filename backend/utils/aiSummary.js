@@ -10,8 +10,7 @@ const genAI = new GoogleGenerativeAI(AI_API_KEY);
 
 const aiSummary = async (reviews) => {
   try {
-    console.log("✅ Running AI Model to Generate Summary...");
-    console.log('Your API key:', AI_API_KEY);
+    console.log("✅ Running AI Model to Generate Summary...")
 
     // Use the latest version of the model
     const model = genAI.getGenerativeModel({
